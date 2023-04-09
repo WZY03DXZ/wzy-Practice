@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频画廊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .box {
+            width: auto;
+            height: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            /* border: 1px solid pink; */
+            position: relative;
+        }
+
+
+        .imgl {
+            margin-top: 50px;
+            position: absolute;
+            display: flex;
+            animation: run 90s linear infinite;
+        }
+
+        .imgl img {
+            transition: all 0.3s;
+            height: 300px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        @keyframes run {
+            from {
+                transform: translateX(0);
+
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .imgl:hover {
+            animation-play-state: paused;
+
+        }
+
+        .imgl img:hover {
+            transform: scale(1.3);
+            ;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>视频画廊</h1>
+    <div class="box">
+        <div class="imgl">
+            <img src="../img/罗峰/0.jpg" alt="">
+            <img src="../img/罗峰/1.jpg" alt="">
+            <img src="../img/罗峰/2.jpg" alt="">
+            <img src="../img/罗峰/3.jpg" alt="">
+            <img src="../img/罗峰/4.jpg" alt="">
+            <img src="../img/罗峰/5.jpg" alt="">
+            <img src="../img/罗峰/6.jpg" alt="">
+            <img src="../img/罗峰/7.jpg" alt="">
+            <img src="../img/罗峰/8.jpg" alt="">
+            <img src="../img/罗峰/9.jpg" alt="">
+            <img src="../img/罗峰/10.jpg" alt="">
+            <img src="../img/罗峰/11.jpg" alt="">
+            <img src="../img/罗峰/12.jpg" alt="">
+            <img src="../img/罗峰/13.jpg" alt="">
+            <img src="../img/罗峰/14.jpg" alt="">
+            <img src="../img/罗峰/15.jpg" alt="">
+            <img src="../img/罗峰/16.jpg" alt="">
+            <img src="../img/罗峰/17.jpg" alt="">
+            <img src="../img/罗峰/18.jpg" alt="">
+            <img src="../img/罗峰/19.jpg" alt="">
+            <img src="../img/罗峰/20.jpg" alt="">
+            <img src="../img/罗峰/0.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

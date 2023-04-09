@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+
+        @media (max-width: 320px) {
+            div {
+                width: 800px;
+                height: 400px;
+                background-color: antiquewhite;
+                background-color: beige;
+                background-color: bisque;
+            }
+        }
+
+        @media (min-width: 321px) and (max-width: 375px) {
+            div {
+                width: 700px;
+                height: 100px;
+                background-color: antiquewhite;
+                background-color: beige;
+                background-color: bisque;
+            }
+        }
+
+        @media (min-width: 376px) and (max-width: 425px) {
+            div {
+                width: 400px;
+                height: 200px;
+                background-color: antiquewhite;
+                background-color: beige;
+                background-color: bisque;
+            }
+        }
+
+        @media (min-width: 426px) and (max-width: 768px) {
+            div {
+                width: 100px;
+                height: 200px;
+                background-color: antiquewhite;
+                background-color: beige;
+                background-color: bisque;
+            }
+        }
+
+        @media (min-width: 769px) {
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: antiquewhite;
+                background-color: beige;
+                background-color: bisque;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>响应式布局</h1>
+    <div>
+        <p>12312312</p>
+    </div>
+    <div>
+        <p>12312312</p>
+    </div>
+    <div>
+        <p>12312312</p>
+    </div>
+
+</body>
+
+</html>

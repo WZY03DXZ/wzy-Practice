@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幻灯片播放</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        img {
+            height: 300px;
+            position: absolute;
+            top: 10px;
+            left: 300px;
+            opacity: 0;
+        }
+
+        .active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>幻灯片播放</h1>
+    <img src="../img/罗峰/0.jpg" alt="" class="item active">
+    <img src="../img/罗峰/1.jpg" alt="" class="item">
+    <img src="../img/罗峰/3.jpg" alt="" class="item">
+    <img src="../img/罗峰/4.jpg" alt="" class="item">
+    <img src="../img/罗峰/5.jpg" alt="" class="item">
+    <img src="../img/罗峰/6.jpg" alt="" class="item">
+    <img src="../img/罗峰/7.jpg" alt="" class="item">
+    <img src="../img/罗峰/8.jpg" alt="" class="item">
+    <img src="../img/罗峰/9.jpg" alt="" class="item">
+    <img src="../img/罗峰/10.jpg" alt="" class="item">
+    <img src="../img/罗峰/11.jpg" alt="" class="item">
+    <img src="../img/罗峰/12.jpg" alt="" class="item">
+    <img src="../img/罗峰/13.jpg" alt="" class="item">
+    <img src="../img/罗峰/14.jpg" alt="" class="item">
+    <img src="../img/罗峰/15.jpg" alt="" class="item">
+    <img src="../img/罗峰/16.jpg" alt="" class="item">
+    <img src="../img/罗峰/17.jpg" alt="" class="item">
+    <img src="../img/罗峰/18.jpg" alt="" class="item">
+    <img src="../img/罗峰/19.jpg" alt="" class="item">
+    <img src="../img/罗峰/20.jpg" alt="" class="item">
+    <script>
+        var item = document.querySelectorAll('.item');
+
+        var opa = 1;
+        var time1, time2;
+        var index = 0;
+
+        // 切换下一张图片效果实现
+        function nextImg() {
+            if (time1) {
+                clearInterval(time1);
+            }
+            //用计时器实现渐变消失效果
+            time1 = setInterval(function () {
+                opa -= 0.1;
+                if (opa <= 0) {
+                    clearInterval(time1);
+                    opa = 0;
+                    index++;
+                    index = index % item.length;
+                    fadeIn();
+                }
+                item[index].style.opacity = opa;
+            }, 16.7)
+        }
+
+        // 控制图片的出现
+        function fadeIn() {
+            time2 = setInterval(function () {
+                opa += 0.1;
+                if (opa >= 1) {
+                    clearInterval(time2);
+                    opa = 1;
+                }
+                item[index].style.opacity = opa;
+            }, 16.7)
+        }
+
+        // 控制图片的自动播放
+        var autoPlay = setInterval(nextImg, 2000); 
+    </script>
+</body>
+
+</html>
